@@ -1,6 +1,5 @@
-import React from "react";
-import ComicsList from "../components/comicsList/ComicsList";
 import Banner from "../components/banner/Banner";
+import ComicsList from "../components/comicsList/ComicsList";
 
 const ComicsPage = () => {
   return (
