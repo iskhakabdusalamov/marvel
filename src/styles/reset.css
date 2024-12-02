@@ -12,6 +12,13 @@
   position: relative;
 }
 
+.vision {
+  position: absolute;
+  right: -174px;
+  bottom: -70px;
+  z-index: -1;
+}
+
 ul,
 li {
   list-style-type: none;

@@ -30,6 +30,10 @@
   margin-right: 10px;
 }
 
+.button:disabled {
+  filter: grayscale(0.5);
+}
+
 .button.button__main::before,
 .button.button__main::after {
   background-color: #9f0013;
