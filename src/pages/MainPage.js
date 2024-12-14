@@ -17,7 +17,7 @@ const MainPage = () => {
         <CharList onClickChar={onClickChar} />
         <CharInfo charId={selectedChar} />
       </div>
-      <img className="bg-decoration" src="/img/vision" alt="vision" />
+      <img className="bg-decoration" src="/vision.png" alt="vision" />
     </div>
   );
 };
