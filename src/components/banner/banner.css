@@ -1,11 +1,11 @@
 .banner {
-  margin-top: 50px;
-  width: 100%;
-  background-color: #232222;
-  height: 100px;
-  padding: 0 25px 0 45px;
   display: grid;
   grid-template-columns: 152px auto 133px;
+  background-color: #232222;
+  margin-top: 50px;
+  padding: 0 25px 0 45px;
+  height: 100px;
+  width: 100%;
 }
 
 .bannerMessage {

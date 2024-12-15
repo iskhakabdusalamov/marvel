@@ -2,9 +2,9 @@ import React from "react";
 import useMarvelService from "../../services/useMarvelService";
 import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
+import mjolnir from "../../assets/img/mjolnir.png";
 import View from "./View";
 import "./randomChar.css";
-import mjolnir from "../../assets/img/mjolnir.png";
 
 const RandomChar = () => {
   const [char, setChar] = React.useState(null);
@@ -17,9 +17,7 @@ const RandomChar = () => {
   const updateChar = () => {
     clearError();
     const id = Math.floor(Math.random() * (1011400 - 1011000)) + 1011000;
-    getCharacter(id).then((char) => {
-      setChar(char);
-    });
+    getCharacter(id).then((char) => setChar(char));
   };
 
   const errorMessage = error ? <ErrorMessage /> : null;

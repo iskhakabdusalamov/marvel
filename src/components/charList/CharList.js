@@ -22,9 +22,9 @@ const CharList = ({ onCharSelected }) => {
   };
 
   const onCharListLoaded = (newCharList) => {
-    let ended = false;
+    let charEnded = false;
     if (newCharList.length < 9) {
-      ended = true;
+      charEnded = true;
     }
 
     setCharList((prevCharList) => {
@@ -36,7 +36,7 @@ const CharList = ({ onCharSelected }) => {
 
     setNewItemLoading(false);
     setOffset((prevOffset) => prevOffset + 9);
-    setCharEnded(ended);
+    setCharEnded(charEnded);
   };
 
   const itemRefs = React.useRef([]);
@@ -49,8 +49,8 @@ const CharList = ({ onCharSelected }) => {
     itemRefs.current[id].focus();
   };
 
-  function renderItems(arr) {
-    const items = arr.map((item, index) => {
+  function renderItems(array) {
+    const items = array.map((item, index) => {
       let imgStyle = { objectFit: "cover" };
       if (
         item.thumbnail ===
@@ -83,7 +83,7 @@ const CharList = ({ onCharSelected }) => {
   const spinner = loading && !newItemLoading ? <Spinner /> : null;
 
   return (
-    <div className="char__list">
+    <div>
       {errorMessage}
       {spinner}
       {items}

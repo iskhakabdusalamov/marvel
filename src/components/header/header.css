@@ -3,13 +3,13 @@
   justify-content: space-between;
 }
 
-.title {
+.headerTitle {
   font-weight: bold;
   font-size: 28px;
   line-height: 37px;
 }
 
-span {
+.headerTitle span {
   color: #9f0013;
 }
 
@@ -29,6 +29,6 @@ span {
   color: #9f0013;
 }
 
-.activeLink {
+.menuActiveLink {
   color: #9f0013;
 }

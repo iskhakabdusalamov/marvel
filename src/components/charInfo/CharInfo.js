@@ -18,9 +18,7 @@ const CharInfo = ({ selectedChar }) => {
   const updateChar = () => {
     clearError();
     if (!selectedChar) return;
-    getCharacter(selectedChar).then((char) => {
-      setChar(char);
-    });
+    getCharacter(selectedChar).then((char) => setChar(char));
   };
 
   const skeleton = char || loading || error ? null : <Skeleton />;

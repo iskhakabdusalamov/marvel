@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header">
-      <h1 className="title">
+      <h1 className="headerTitle">
         <NavLink to="/">
           <span>Marvel</span> information portal
         </NavLink>
@@ -12,7 +12,9 @@ const Header = () => {
       <ul className="menu">
         <li>
           <NavLink
-            className={({ isActive }) => (isActive ? "activeLink" : undefined)}
+            className={({ isActive }) =>
+              isActive ? "menuActiveLink" : undefined
+            }
             to="/"
           >
             Characters
@@ -21,7 +23,9 @@ const Header = () => {
         /
         <li>
           <NavLink
-            className={({ isActive }) => (isActive ? "activeLink" : undefined)}
+            className={({ isActive }) =>
+              isActive ? "menuActiveLink" : undefined
+            }
             to="/comics"
           >
             Comics

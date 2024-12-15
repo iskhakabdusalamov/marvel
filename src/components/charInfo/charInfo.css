@@ -1,20 +1,9 @@
 .char__info {
+  position: relative;
   padding: 25px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-  position: relative;
   z-index: 5;
   background-color: #fff;
-}
-
-.char__info-name {
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 29px;
-  text-transform: uppercase;
-}
-
-.char__info .skeleton {
-  margin-top: 30px;
 }
 
 .char__basics {
@@ -27,6 +16,13 @@
   width: 150px;
   height: 150px;
   object-fit: cover;
+}
+
+.char__info-name {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 29px;
+  text-transform: uppercase;
 }
 
 .char__btns {
@@ -61,11 +57,4 @@
   line-height: 25px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 10px;
-}
-
-.char__select {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: center;
 }
