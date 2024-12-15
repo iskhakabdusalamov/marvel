@@ -6,19 +6,19 @@ import ErrorMessage from "../errorMessage/ErrorMessage";
 import View from "./View";
 import "./charInfo.css";
 
-const CharInfo = ({ charId }) => {
+const CharInfo = ({ selectedChar }) => {
   const [char, setChar] = React.useState(null);
 
   const { getCharacter, loading, error, clearError } = useMarvelService();
 
   React.useEffect(() => {
     updateChar();
-  }, [charId]);
+  }, [selectedChar]);
 
   const updateChar = () => {
     clearError();
-    if (!charId) return;
-    getCharacter(charId).then((char) => {
+    if (!selectedChar) return;
+    getCharacter(selectedChar).then((char) => {
       setChar(char);
     });
   };
@@ -29,11 +29,13 @@ const CharInfo = ({ charId }) => {
   const content = !(loading || error || !char) ? <View char={char} /> : null;
 
   return (
-    <div className="char__info">
-      {skeleton}
-      {errorMessage}
-      {spinner}
-      {content}
+    <div>
+      <div className="char__info">
+        {skeleton}
+        {errorMessage}
+        {spinner}
+        {content}
+      </div>
     </div>
   );
 };

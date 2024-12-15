@@ -18,7 +18,7 @@ const Header = () => {
             Characters
           </NavLink>
         </li>
-        <li>/</li>
+        /
         <li>
           <NavLink
             className={({ isActive }) => (isActive ? "activeLink" : undefined)}

@@ -4,7 +4,7 @@ import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import "./charList.css";
 
-const CharList = ({ onClickChar }) => {
+const CharList = ({ onCharSelected }) => {
   const [charList, setCharList] = React.useState([]);
   const [newItemLoading, setNewItemLoading] = React.useState(false);
   const [offset, setOffset] = React.useState(210);
@@ -65,7 +65,7 @@ const CharList = ({ onClickChar }) => {
           ref={(el) => (itemRefs.current[index] = el)}
           key={item.id}
           onClick={() => {
-            onClickChar(item.id);
+            onCharSelected(item.id);
             focusOnItem(index);
           }}
         >

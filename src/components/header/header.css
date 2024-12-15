@@ -19,7 +19,10 @@ span {
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
-  gap: 8px;
+}
+
+.menu li {
+  margin: 0 8px;
 }
 
 .menu li:hover {

@@ -4,6 +4,7 @@ import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import View from "./View";
 import "./randomChar.css";
+import mjolnir from "../../assets/img/mjolnir.png";
 
 const RandomChar = () => {
   const [char, setChar] = React.useState(null);
@@ -40,11 +41,7 @@ const RandomChar = () => {
         <button onClick={updateChar} className="button button__main">
           <div className="inner">try it</div>
         </button>
-        <img
-          src="/mjolnir.png"
-          alt="mjolnir"
-          className="randomchar__decoration"
-        />
+        <img src={mjolnir} alt="mjolnir" className="randomchar__decoration" />
       </div>
     </div>
   );
