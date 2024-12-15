@@ -1,23 +1,25 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
-import MainPage from "./pages/MainPage";
-import ComicsPage from "./pages/ComicsPage";
-import SinglePage from "./pages/SinglePage";
-import Page404 from "./pages/404";
-import "./styles/App.css";
-import "./styles/button.css";
+import Main from "./pages/Main";
+import Comics from "./pages/Comics";
+import SingleComic from "./pages/SingleComic";
+import SingleChar from "./pages/SingleChar";
+import NotFound from "./pages/NotFound";
+
+import "./assets/styles/App.css";
+import "./assets/styles/button.css";
+
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/comics" element={<ComicsPage />} />
-        <Route path="/comics" element={<ComicsPage />} />
-        <Route path="/comics/:comicId" element={<SinglePage />} />
-        <Route path="*" element={<Page404 />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/comics" element={<Comics />} />
+        <Route path="/comics/:id" element={<SingleComic />} />
+        <Route path="/characters/:id" element={<SingleChar />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
