@@ -1,10 +1,10 @@
-import { useState, useCallback } from "react";
+import React from "react";
 
 export const useHttp = () => {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState(null);
 
-  const request = useCallback(
+  const request = React.useCallback(
     async (
       url,
       method = "GET",
@@ -33,7 +33,7 @@ export const useHttp = () => {
     []
   );
 
-  const clearError = useCallback(() => setError(null), []);
+  const clearError = React.useCallback(() => setError(null), []);
 
-  return { loading, request, error, clearError };
+  return { request, loading, error, clearError };
 };
